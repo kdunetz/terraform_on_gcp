@@ -1,0 +1,37 @@
+https://github.com/steinim/gcp-terraform-workshop
+
+cd /Users/kevindunetz/terraform/terraform-google-sql-db
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+
+If you delete a resource manually in the UI, you need to run
+
+terraform state list to see the names of the resources
+
+then 
+
+terraform state rm to manually remove
+
+OUTPUT OF gcloud info to make things work
+Installation Properties: [/Users/kevindunetz/google-cloud-sdk/properties]
+User Config Directory: [/Users/kevindunetz/.config/gcloud]
+Active Configuration Name: [bstm]
+Active Configuration Path: [/Users/kevindunetz/.config/gcloud/configurations/config_bstm]
+
+Account: [kevin@bringsavingstome.com]
+Project: [kevin-terraform-admin]
+
+Current Properties:
+  [core]
+    project: [kevin-terraform-admin]
+    account: [kevin@bringsavingstome.com]
+    disable_usage_reporting: [False]
+
+Logs Directory: [/Users/kevindunetz/.config/gcloud/logs]
+Last Log File: [/Users/kevindunetz/.config/gcloud/logs/2018.12.04/08.22.38.588890.log]
+
+git: [git version 2.19.0.605.g01d371f741-goog]
+ssh: [OpenSSH_7.6p1, OpenSSL 1.0.2p  14 Aug 2018]
+
