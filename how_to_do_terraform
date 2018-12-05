@@ -1,3 +1,6 @@
+USE THIS TO GET THE BASICS IN PLACE TO INITIALIZE
+https://cloud.google.com/community/tutorials/managing-gcp-projects-with-terraform
+
 https://github.com/steinim/gcp-terraform-workshop
 
 cd /Users/kevindunetz/terraform/terraform-google-sql-db
@@ -6,13 +9,13 @@ terraform plan
 terraform apply
 terraform destroy
 
-If you delete a resource manually in the UI, you need to run
+If you delete a resource manually in the GCP Console UI, you need to run
 
-terraform state list to see the names of the resources
+"terraform state list" to see the names of the resources
 
 then 
 
-terraform state rm to manually remove
+"terraform state rm <RESOURCE>" to manually remove
 
 OUTPUT OF gcloud info to make things work
 Installation Properties: [/Users/kevindunetz/google-cloud-sdk/properties]

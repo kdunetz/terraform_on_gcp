@@ -1,8 +1,9 @@
+# ONLY RUN THIS ONCE TO INITIALIZE THE WHOLE TERRAFORM...then you can run other run_tf.sh
 #gcloud organizations list
 #gcloud beta billing accounts list
 export USER=kevin
-export TF_VAR_org_id=365936959477
-export TF_VAR_billing_account=015FEA-2A8CD7-1D0401
+export TF_VAR_org_id=
+export TF_VAR_billing_account=
 export TF_ADMIN=${USER}-terraform-admin
 export TF_CREDS=~/.config/gcloud/${USER}-terraform-admin.json
 
@@ -17,6 +18,7 @@ gcloud beta billing projects link ${TF_ADMIN} \
 gcloud iam service-accounts create terraform \
   --display-name "Terraform admin account"
 
+# Create the json file referenced above
 gcloud iam service-accounts keys create ${TF_CREDS} \
   --iam-account terraform@${TF_ADMIN}.iam.gserviceaccount.com
 
